@@ -11,7 +11,6 @@ public class Kata6 {
         File file = new File("/");
         Iterator<Integer> iterator = megabytes(legthsOf(iteratorOf(file.listFiles())));
         while(iterator.hasNext()) System.out.println(iterator.next());
-            
     }
     
     private static Iterator<Integer> megabytes(Iterator<Long> legthsOf) {
@@ -20,7 +19,6 @@ public class Kata6 {
             public boolean hasNext() {
                 return legthsOf.hasNext();
             }
-
             @Override
             public Integer next() {
                 return (int)(legthsOf.next() / (1024*1024));
@@ -34,7 +32,6 @@ public class Kata6 {
             public boolean hasNext() {
                 return iteratorOf.hasNext();
             }
-
             @Override
             public Long next() {
                 return iteratorOf.next().length();
@@ -49,7 +46,6 @@ public class Kata6 {
             @Override
             public boolean hasNext() {
                 return i < listFiles.length;
-
             }
 
             @Override
